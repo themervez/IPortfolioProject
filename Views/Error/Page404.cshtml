@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@*<div class="container">
+        <br />
+        <h1>Ooops!</h1>
+        <h1>Something went wrong..Try returning to the Home Page... </h1>
+        <br />
+        <a href="/UserUI/Index/" class="btn btn-warning">Home Page</a>
+    </div>*@
+
+<div role="main" class="main">
+    <section style="position:relative">
+        <div class="slider-container rev_slider_wrapper" style="height: 600px;">
+            <div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options="{ 'gridwidth': 800, 'gridheight': 600}">
+                <ul>
+                    <li data-transition="fade">
+                        <img src="~/Templates/iportfolio-starter/assets/images/ErrorMessage1.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-5" style="position:absolute;z-index:1;margin-top:-220px;margin-left:160px;opacity:1">
+            <div class="col-md align-self-end">
+                <a href="/UserUI/Index/" class="btn btn-danger">Try Home Page</a>
+            </div>
+            </div>
+</section>
+</div>

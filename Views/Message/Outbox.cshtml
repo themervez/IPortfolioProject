@@ -1,0 +1,27 @@
+﻿@model List<DemoUpSchoolProject.Models.Entities.TblMessage>
+@{
+    ViewBag.Title = "Outbox";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int counter = 0;
+}
+
+<h2>Outbox</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>To:</th>
+        <th>Subject</th>
+        <th>Open the Message</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        counter++;
+        <tr>
+            <td>@counter</td>
+            <td>@item.ReceiverNameSurname</td>
+            <td>@item.MessageSubject</td>
+            <td><a href="/Message/MessageDetails/@item.MessageID" class="btn btn-primary">Open</a></td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,29 @@
+﻿@using DemoUpSchoolProject.Models.Entities
+@model List<TblAbout>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Name Surname</th>
+        <th>Title</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+<tr>
+    <td>@item.AboutID</td>
+    <td>@item.NameSurname</td>
+    <td>@item.Title</td>
+    <td><a href="/About/DeleteAbout/@item.AboutID" class="btn btn-danger">Delete</a></td>
+    <td><a href="/About/UpdateAbout/@item.AboutID" class="btn btn-success">Update</a></td>
+</tr>
+            }
+</table>
+<a href="/About/AddAbout" class="btn btn-primary">Add New Field</a>
+

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>New Service Adding Page</h2>
+
+<form method="post">
+    <label>Service Title</label>
+    <input type="text" name="Title" class="form-control" /> @*'name' kısmında kullanılan yöntem aslında riskli bi yöntem bunun yerine Html Helper kullanabilirdik*@
+    <br />
+    <button class="btn btn-info">Save the Service</button>
+</form>
+
